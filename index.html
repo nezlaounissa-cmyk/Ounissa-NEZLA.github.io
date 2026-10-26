@@ -4,408 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ounissa Nezla | Systems, Network & Cybersecurity Engineer</title>
-
-
 <style>
-
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-scroll-behavior:smooth;
-}
-
-
-body{
-background:#050816;
-color:white;
-}
-
-
-header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#050816,#0f172a);
-}
-
-
-header h1{
-font-size:70px;
-color:#38bdf8;
-text-shadow:0 0 20px #38bdf8;
-margin-bottom:15px;
-}
-
-
-header h2{
-font-size:24px;
-color:#cbd5e1;
-margin-bottom:25px;
-}
-
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-background:#2563eb;
-border-radius:40px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-transition:.3s;
-}
-
-
-.btn:hover{
-background:#3b82f6;
-transform:translateY(-5px);
-}
-
-
-section{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-
-
-.section-title{
-font-size:40px;
-color:#38bdf8;
-margin-bottom:30px;
-text-align:center;
-}
-
-
-.card{
-background:#111827;
-padding:30px;
-border-radius:20px;
-margin-bottom:20px;
-box-shadow:0 0 20px rgba(56,189,248,.15);
-}
-
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-
-.skill{
-padding:12px 20px;
-border-radius:25px;
-background:#2563eb;
-font-weight:bold;
-}
-
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-
-.project{
-background:#111827;
-border-radius:20px;
-padding:25px;
-box-shadow:0 0 20px rgba(56,189,248,.15);
-transition:.3s;
-}
-
-
-.project:hover{
-transform:translateY(-8px);
-}
-
-
-.project h3{
-margin-bottom:10px;
-color:#38bdf8;
-}
-
-
-.timeline{
-border-left:3px solid #38bdf8;
-padding-left:25px;
-}
-
-
-.timeline-item{
-margin-bottom:35px;
-}
-
-
-.timeline-item h3{
-color:#38bdf8;
-}
-
-
-footer{
-padding:30px;
-text-align:center;
-border-top:1px solid #1e293b;
-color:#94a3b8;
-}
-
-
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background:#020617;color:#e2e8f0;font-family:Segoe UI,Arial,sans-serif;line-height:1.7}
+nav{position:sticky;top:0;z-index:100;display:flex;justify-content:center;gap:25px;flex-wrap:wrap;padding:15px;background:#020617ee;border-bottom:1px solid #00ff88;box-shadow:0 0 15px #00ff8820}
+nav a{color:#94a3b8;text-decoration:none;font-family:monospace;transition:.3s}
+nav a:hover{color:#00ff88;text-shadow:0 0 10px #00ff88}
+header{padding:60px 20px 50px;text-align:center;background:radial-gradient(circle at 20% 20%,#00ff8815,transparent 35%),radial-gradient(circle at 80% 20%,#0099ff18,transparent 35%),#020617}
+.load{color:#00ff88;font-family:monospace;margin-bottom:20px}
+.profile{width:140px;height:140px;object-fit:cover;border-radius:50%;border:3px solid #00ff88;box-shadow:0 0 15px #00ff88,0 0 35px #00ff8855;margin-bottom:20px}
+header h1{font-size:clamp(39px,8vw,70px);letter-spacing:3px;color:#00ff88;text-shadow:0 0 15px #00ff88}
+header h2{font-size:clamp(18px,3vw,25px);color:#38bdf8}
+.subtitle{color:#94a3b8;margin:8px 0 25px}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 20px;border:1px solid #00ff88;border-radius:5px;color:#00ff88;text-decoration:none;font:bold 14px monospace;transition:.3s}
+.btn:hover{background:#00ff88;color:#020617;box-shadow:0 0 20px #00ff8888;transform:translateY(-3px)}
+section{max-width:1150px;margin:auto;padding:55px 20px}.title{font:35px monospace;color:#38bdf8;margin-bottom:28px}
+.title:before{content:"root@ounissa:~$ ";color:#00ff88;font-size:.65em}
+.terminal,.card{background:#07111f;border:1px solid #15364a;border-left:3px solid #00ff88;border-radius:8px;padding:25px;box-shadow:0 0 25px #00ff8810}
+.green{color:#00ff88}.blue{color:#38bdf8}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;margin-top:20px}
+.stat{background:#07111f;border:1px solid #15364a;padding:20px;text-align:center;border-radius:8px}.stat h3{color:#00ff88;font-size:28px}.stat p{color:#94a3b8}
+.category{color:#00ff88;font-family:monospace;margin:28px 0 12px}.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skills span{padding:9px 14px;background:#081525;border:1px solid #1d4f63;border-radius:5px;color:#7dd3fc;font-family:monospace;transition:.25s}
+.skills span:hover{color:#00ff88;border-color:#00ff88;box-shadow:0 0 12px #00ff8844;transform:translateY(-2px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.project{background:#07111f;border:1px solid #15364a;border-top:3px solid #38bdf8;padding:22px;border-radius:8px;transition:.3s}
+.project:hover{border-color:#00ff88;transform:translateY(-6px);box-shadow:0 0 25px #00ff8822}.project h3{color:#00ff88;font-family:monospace;margin-bottom:10px}.project p{color:#cbd5e1}
+.timeline{border-left:2px solid #00ff88;padding-left:28px}.exp{position:relative;background:#07111f;border:1px solid #15364a;padding:23px;border-radius:8px;margin-bottom:30px}
+.exp:before{content:"";position:absolute;left:-36px;top:25px;width:13px;height:13px;background:#00ff88;border-radius:50%;box-shadow:0 0 15px #00ff88}
+.exp h3{color:#38bdf8}.date{color:#00ff88;font-family:monospace;margin:5px 0 12px}.exp ul{margin-left:20px}.exp li{margin-bottom:6px}.card h3{color:#00ff88}
+footer{padding:30px;text-align:center;background:#000;border-top:1px solid #15364a;color:#64748b;font-family:monospace}footer span{color:#00ff88}
+@media(max-width:600px){nav{gap:11px;font-size:12px}header{padding:45px 15px}section{padding:45px 17px}.title{font-size:25px}.title:before{display:block;margin-bottom:5px}.profile{width:115px;height:115px}}
 </style>
 </head>
-
-
 <body>
-
-
+<nav><a href="#about">whoami</a><a href="#skills">skills</a><a href="#projects">projects</a><a href="#experience">experience</a><a href="#formation">education</a><a href="#contact">contact</a></nav>
 <header>
-
-
-<h1>OUNISSA NEZLA</h1>
-
-
-<h2>Systems • Network • Cybersecurity Engineer</h2>
-
-
-<a href="#about" class="btn">Découvrir mon profil</a>
-
-
+<p class="load">&gt; initializing cybersecurity portfolio...</p>
+<img src="profile.jpg" class="profile" alt="Ounissa Nezla">
+<h1>OUNISSA NEZLA</h1><h2>Systems • Network • Cybersecurity Engineer</h2>
+<p class="subtitle">Infrastructure IT • Network Security • Microsoft 365 • Cloud • Cybersecurity</p>
+<div class="buttons"><a href="#about" class="btn">&gt; WHOAMI</a><a href="#projects" class="btn">&gt; PROJECTS</a><a href="cv-ounissa-nezla.pdf" target="_blank" class="btn">&gt; DOWNLOAD_CV</a></div>
 </header>
-
-
-<section id="about">
-
-
-<h2 class="section-title">À propos de moi</h2>
-
-
-<div class="card">
-
-
-<p>
-
-
-Technicienne informatique spécialisée en systèmes, réseaux et cybersécurité, avec plusieurs années d'expérience en administration d'infrastructures IT.
-
-
-Je participe à des projets de migration de serveurs, d'administration Active Directory, de déploiement Microsoft 365, de sécurisation des réseaux et de support utilisateurs de niveau 1 à 3.
-
-
-Passionnée par les nouvelles technologies, je poursuis actuellement une formation Bac+5 en Ingénierie Systèmes, Réseaux et Cybersécurité.
-
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-<section>
-
-
-<h2 class="section-title">Compétences</h2>
-
-
-<div class="skills">
-
-
-<div class="skill">Windows Server</div>
-<div class="skill">Active Directory</div>
-<div class="skill">DNS</div>
-<div class="skill">DHCP</div>
-<div class="skill">GPO</div>
-<div class="skill">Hyper-V</div>
-<div class="skill">Microsoft 365</div>
-<div class="skill">Exchange Online</div>
-<div class="skill">SharePoint</div>
-<div class="skill">FortiGate</div>
-<div class="skill">Cisco</div>
-<div class="skill">VPN</div>
-<div class="skill">VLAN</div>
-<div class="skill">TCP/IP</div>
-<div class="skill">Wi-Fi</div>
-<div class="skill">Kaspersky Security Center</div>
-<div class="skill">PowerShell</div>
-<div class="skill">Cybersécurité</div>
-
-
-</div>
-
-
-</section>
-
-
-<section>
-
-
-<h2 class="section-title">Réalisations</h2>
-
-
-<div class="grid">
-
-
-<div class="project">
-<h3>Migration de Serveurs</h3>
-<p>
-Participation à plusieurs projets de migration d'infrastructures et de services tout en garantissant la continuité de production.
-</p>
-</div>
-
-
-<div class="project">
-<h3>Administration Active Directory</h3>
-<p>
-Création des utilisateurs, groupes, stratégies GPO, gestion des droits d'accès et sécurisation des environnements Windows.
-</p>
-</div>
-
-
-<div class="project">
-<h3>Microsoft 365</h3>
-<p>
-Gestion des comptes utilisateurs, licences, Exchange Online, SharePoint et administration cloud.
-</p>
-</div>
-
-
-<div class="project">
-<h3>FortiGate & Sécurité</h3>
-<p>
-Configuration de VPN, NAT, pare-feu, filtrage web, contrôle d'accès et sécurisation réseau.
-</p>
-</div>
-
-
-<div class="project">
-<h3>Support Utilisateurs</h3>
-<p>
-Support informatique N1, N2 et N3, diagnostic matériel, maintenance et accompagnement utilisateurs.
-</p>
-</div>
-
-
-<div class="project">
-<h3>Réseaux & Cisco</h3>
-<p>
-Configuration VLAN, switchs, routage, Wi-Fi entreprise et résolution d'incidents réseau.
-</p>
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<section>
-
-
-<h2 class="section-title">Expériences Professionnelles</h2>
-
-
-<div class="timeline">
-
-
-<div class="timeline-item">
-<h3>Technicienne Informatique - WEOCEO</h3>
-<p>2025 - 2026</p>
-<p>
-Support utilisateurs N1/N2/N3, Microsoft 365, FortiGate, Kaspersky Security Center, câblage réseau, Wi-Fi et administration système.
-</p>
-</div>
-
-
-<div class="timeline-item">
-<h3>Technicienne Informatique - CMPR Bobigny</h3>
-<p>2023 - 2024</p>
-<p>
-Migration réseau, support utilisateurs, supervision, gestion Active Directory, GPO et déploiement logiciel.
-</p>
-</div>
-
-
-<div class="timeline-item">
-<h3>Stage Systèmes & Réseaux - KUVANGO IT SYSTEM</h3>
-<p>2023</p>
-<p>
-VMware, Hyper-V, ACL, Firewall, VPN IPsec, supervision réseau et cybersécurité.
-</p>
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<section>
-
-
-<h2 class="section-title">Formation</h2>
-
-
-<div class="card">
-
-
-<h3>Bac+5 Ingénierie Systèmes Réseaux & Cybersécurité</h3>
-<p>IEF2I - Vincennes</p>
-
-
-<br>
-
-
-<h3>BTS SIO - Services Informatiques aux Organisations</h3>
-<p>Institut F2I</p>
-
-
-</div>
-
-
-</section>
-
-
-<section>
-
-
-<h2 class="section-title">Contact</h2>
-
-
-<div class="card">
-
-
-<p>📧 Contact professionnel disponible sur demande</p>
-<p>💼 LinkedIn</p>
-<p>💻 GitHub</p>
-
-
-</div>
-
-
-</section>
-
-
-<footer>
-
-
-© 2026 - Ounissa Nezla | Systems • Network • Cybersecurity
-
-
-</footer>
-
-
+<section id="about"><h2 class="title">whoami</h2><div class="terminal">
+<p><span class="green">ounissa@cybersec:~$</span><span class="blue"> whoami</span></p><p>Ounissa Nezla</p><p>Systems • Network • Cybersecurity Engineer</p><br>
+<p><span class="green">ounissa@cybersec:~$</span><span class="blue"> cat profile.txt</span></p><br>
+<p>Professionnelle IT spécialisée dans l'administration des systèmes, des réseaux et la cybersécurité.</p>
+<p>J'interviens sur des environnements Windows Server, Active Directory, Microsoft 365, FortiGate et sur la sécurisation des infrastructures réseau.</p>
+<p>Mon expérience couvre également le support informatique N1 à N3, les migrations de serveurs, l'automatisation via GPO, les VPN, la supervision et l'analyse d'incidents.</p></div>
+<div class="stats"><div class="stat"><h3>3+</h3><p>Années d'expérience</p></div><div class="stat"><h3>N1-N3</h3><p>Support IT</p></div><div class="stat"><h3>SYS</h3><p>Systèmes & Réseaux</p></div><div 
+class="stat"><h3>SEC</h3><p>Cybersécurité</p></div></div></section>
+<section id="skills"><h2 class="title">skills --list</h2>
+<h3 class="category">[ SYSTEMS ]</h3><div class="skills"><span>Windows Server</span><span>Windows 10/11</span><span>Active 
+Directory</span><span>GPO</span><span>DNS</span><span>DHCP</span><span>Hyper-V</span><span>VMware</span><span>PowerShell</span><span>File Server</span><span>Windows Deployment</span></div>
+<h3 class="category">[ NETWORK ]</h3><div class="skills"><span>Cisco</span><span>TCP/IP</span><span>LAN / 
+WAN</span><span>VLAN</span><span>Routing</span><span>Switching</span><span>NAT</span><span>Wi-Fi</span><span>VPN</span><span>IPsec</span><span>Network Troubleshooting</span></div>
+<h3 class="category">[ CYBERSECURITY ]</h3><div class="skills"><span>FortiGate</span><span>Firewall Policies</span><span>Web Filtering</span><span>Network Security</span><span>ACL</span><span>VPN Security</span><span>Traffic 
+Analysis</span><span>Security Logs</span><span>Incident Analysis</span><span>Hardening</span><span>Kaspersky Security Center</span><span>Endpoint Security</span><span>Cybersecurity Audit</span><span>NIS2</span></div>
+<h3 class="category">[ MICROSOFT CLOUD ]</h3><div class="skills"><span>Microsoft 365</span><span>Exchange Online</span><span>SharePoint</span><span>OneDrive</span><span>Microsoft 
+Teams</span><span>SMTP</span><span>SPF</span><span>DKIM</span><span>Mail Flow</span></div>
+<h3 class="category">[ IT SUPPORT ]</h3><div class="skills"><span>Support N1/N2/N3</span><span>Windows Troubleshooting</span><span>Hardware</span><span>Printers</span><span>Remote Support</span><span>Software 
+Deployment</span><span>IT Documentation</span><span>Incident Management</span></div></section>
+<section id="projects"><h2 class="title">projects --show</h2><div class="grid">
+<div class="project"><h3>FortiGate & Security</h3><p>Configuration et analyse de pare-feu FortiGate, règles firewall, NAT, VPN, filtrage Internet et analyse du trafic réseau.</p></div>
+<div class="project"><h3>Active Directory & GPO</h3><p>Administration des utilisateurs, groupes, droits d'accès, unités d'organisation et stratégies de groupe GPO.</p></div>
+<div class="project"><h3>Migration de serveurs</h3><p>Participation aux migrations de serveurs et d'applications métiers tout en maintenant la continuité des services.</p></div>
+<div class="project"><h3>Déploiement automatisé</h3><p>Déploiement de fichiers, configurations et paramètres sur les postes Windows via Active Directory et GPO.</p></div>
+<div class="project"><h3>Microsoft 365</h3><p>Administration Exchange Online, SharePoint, OneDrive, comptes utilisateurs, licences, messagerie et configuration SMTP.</p></div>
+<div class="project"><h3>VPN & Remote Access</h3><p>Configuration et diagnostic de connexions VPN sécurisées pour l'accès distant aux infrastructures informatiques.</p></div>
+<div class="project"><h3>Audit Cybersécurité</h3><p>Analyse des pare-feu, antivirus, sauvegardes, Active Directory, VPN et infrastructures réseau avec recommandations de sécurité.</p></div>
+<div class="project"><h3>Infrastructure Réseau</h3><p>Administration et diagnostic LAN, VLAN, Wi-Fi, switches, routage, DHCP, DNS et connectivité IP.</p></div></div></section>
+<section id="experience"><h2 class="title">experience.log</h2><div class="timeline">
+Code complet du portfolio - Ounissa Nezla Page 2
+<div class="exp"><h3>Technicienne Informatique • WEOCEO</h3><p class="date">2025 → 2026</p><ul><li>Support informatique utilisateurs de niveaux N1, N2 et N3.</li><li>Diagnostic et résolution d'incidents systèmes, réseaux et 
+matériels.</li><li>Administration Microsoft 365, Exchange Online, SharePoint et OneDrive.</li><li>Administration et diagnostic d'environnements FortiGate.</li><li>Analyse des règles firewall, du trafic réseau et des accès 
+Internet.</li><li>Gestion de la sécurité des postes avec Kaspersky Security Center.</li><li>Diagnostic des réseaux LAN, Wi-Fi, VLAN, DNS et DHCP.</li><li>Installation, configuration et préparation de postes Windows.</li><li>Gestion 
+des imprimantes et équipements informatiques.</li><li>Participation à des migrations de serveurs et applications métiers.</li><li>Déploiement de configurations via Active Directory et GPO.</li><li>Participation à des audits 
+techniques et cybersécurité.</li></ul></div>
+<div class="exp"><h3>Technicienne Informatique • CMPR Bobigny</h3><p class="date">2023 → 2024</p><ul><li>Support informatique et assistance quotidienne aux utilisateurs.</li><li>Administration Active Directory et gestion des comptes 
+utilisateurs.</li><li>Gestion des groupes, droits d'accès et ressources réseau.</li><li>Création et administration de stratégies GPO.</li><li>Déploiement de logiciels et configuration des postes Windows.</li><li>Participation à des 
+projets de migration réseau.</li><li>Diagnostic des incidents systèmes, réseaux et matériels.</li><li>Supervision et maintenance des équipements informatiques.</li></ul></div>
+<div class="exp"><h3>Stage Systèmes & Réseaux • KUVANGO IT SYSTEM</h3><p class="date">2023</p><ul><li>Installation et administration de machines virtuelles VMware et Hyper-V.</li><li>Configuration et administration d'environnements 
+réseau.</li><li>Configuration des VLAN et segmentation réseau.</li><li>Mise en place et analyse de règles ACL et firewall.</li><li>Configuration de VPN IPsec.</li><li>Supervision des infrastructures réseau.</li><li>Application des 
+principes de sécurisation des systèmes et réseaux.</li></ul></div></div></section>
+<section id="formation"><h2 class="title">education.txt</h2><div class="card"><h3>Bac+5 • Ingénierie Systèmes, Réseaux & Cybersécurité</h3><p>IEF2I • Vincennes</p><br><h3>BTS SIO • Services Informatiques aux 
+Organisations</h3><p>Institut F2I</p></div></section>
+<section id="contact"><h2 class="title">contact --connect</h2><div class="terminal"><p><span class="green">ounissa@cybersec:~$</span><span class="blue"> ./contact.sh</span></p><br><p>Île-de-France, 
+France</p><p>LinkedIn</p><p>GitHub</p><p>Contact professionnel</p><br><div class="buttons"><a href="TON-LIEN-LINKEDIN" target="_blank" class="btn">LINKEDIN</a><a href="TON-LIEN-GITHUB" target="_blank" class="btn">GITHUB</a><a 
+href="cv-ounissa-nezla.pdf" target="_blank" class="btn">DOWNLOAD CV</a></div></div></section>
+<footer><p><span>root@ounissa:~$</span> echo "Thanks for visiting"</p><p>© 2026 Ounissa Nezla • Systems • Network • Cybersecurity</p></footer>
 </body>
-</html>
-
+</html
